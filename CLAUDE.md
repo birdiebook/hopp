@@ -25,16 +25,18 @@ från `birdiebook/arbetssatt`: ändra där och synka, aldrig i kopian.
 
 - **Logiken bor i `AirtimeKit/`** (Swift-paket, bara Foundation) och testas på Linux
   i GitHub Actions (`swift:6.1`, release med `-enable-testing`). Det är den enda
-  kompilatorn före Codemagic: **pusha och läs resultatet** innan du tror att
+  kompilatorn före TestFlight-bygget: **pusha och läs resultatet** innan du tror att
   Swift-kod fungerar: `git fetch origin ci-resultat && git show
   origin/ci-resultat:resultat/<sha>.txt`.
 - **Appen i `App/` är ett tunt SwiftUI-skal.** Xcode-projektet genereras ur
   `project.yml` (XcodeGen) och är gitignorerat, liksom `App/Info.plist`.
-- **TestFlight** byggs av Codemagic (`codemagic.yaml`, `ios-testflight`) med samma
-  App Store Connect-nyckel som Idunn och Birdiebook. Bundle-id `se.birdiebook.airtime`.
-  Bygget startas **bara** med `python tools/bygg.py --starta`, efter Johannes ja,
-  högst ett per dag. Aldrig med en tagg.
-- App-koden kompileras först hos Codemagic, så ett fel där kostar ett bygge.
+- **TestFlight** byggs i GitHub Actions (`.github/workflows/testflight.yml`,
+  BESLUT B9), gratis eftersom repot är publikt. Bundle-id `se.birdiebook.airtime`.
+  Bygget startas **bara för hand** ("Run workflow", eller `run_workflow` via
+  GitHub-API:t), efter Johannes ja, högst ett per dag. Aldrig med en tagg eller
+  push. `codemagic.yaml` och `tools/bygg.py` är vägen via Codemagic, som står
+  tills dess minuter fylls på.
+- App-koden kompileras först i TestFlight-bygget, så ett fel där kostar ett bygge.
   Läs igenom App/-ändringar extra noga mot API:ernas signaturer före push.
 
 ## Beslut och metod

@@ -69,3 +69,17 @@ Status: **gäller** · **prövas** (gäller tills en mätning avgör) · **ersat
   "Airtime – Jump Test". Bundle-id `se.birdiebook.airtime`, paketet `AirtimeKit`.
 - **Behålls:** repot heter `hopp` (syns ingenstans), liksom grenen `ci-resultat`.
 - **Bortvalt:** Hopp (svenskt), Liftoff, Vert, Hang Time.
+
+## B9 — TestFlight byggs i GitHub Actions
+*2026-10-20 · gäller · Codemagics minuter slut till 1 november*
+
+- **Valt:** `.github/workflows/testflight.yml` på GitHubs macOS-maskin, som är
+  gratis för ett publikt repo (B7). Samma steg och verktyg som `codemagic.yaml`
+  (codemagic-cli-tools), med App Store Connect-nyckeln och signeringsnyckeln som
+  repots Actions-hemligheter. Startas bara för hand, efter Johannes ja, högst ett
+  bygge per dag.
+- **Bortvalt:** vänta till 1 november, eller betala för Codemagic.
+- **Kostnad:** inga Codemagic-minuter alls. Bygget tar troligen längre tid än på
+  Codemagics M2.
+- **Omprövas:** när Codemagics minuter fylls på. Kvarstår vägen här tas
+  `codemagic.yaml` och `tools/bygg.py` bort, så att det bara finns en väg.
