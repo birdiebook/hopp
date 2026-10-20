@@ -42,7 +42,7 @@ RESERV = 20
 # Skattningen av ett bygge när inget finns att gå på.
 OKANT = 40
 PAGAR = ("queued", "preparing", "fetching", "building", "testing", "publishing", "finishing")
-# Högst ett TestFlight-bygge per dag och app, räknat i svensk tid (grundaren 2026-10-15).
+# Högst ett TestFlight-bygge per dag och app, räknat i svensk tid (Johannes 2026-10-15).
 ZON = ZoneInfo("Europe/Stockholm")
 # Där token letas när den inte finns i miljön: hemdatorns gemensamma .env.
 ENV_FILER = (Path(r"C:\dev\golf-sg\.env"),)
@@ -135,7 +135,7 @@ def hinder(byggen: list[dict], nu: datetime, app_id: str, flode: str, *, en_per_
     """Det som stoppar ett bygge i `flode` just nu; tom lista när det kan starta.
 
     `en_per_dag` för TestFlight (inte för prov). `reserv` för prov och förhandsvisningar, som inte får äta
-    TestFlights minuter. `betalt` när grundaren slagit på betalning; `igen_idag` bara på grundarens begäran.
+    TestFlights minuter. `betalt` när Johannes slagit på betalning; `igen_idag` bara på Johannes begäran.
     """
     ut: list[str] = []
     for b in byggen:

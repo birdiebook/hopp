@@ -1,6 +1,6 @@
 ---
 name: arbetssatt
-description: Grundarens arbetssätt för alla appar (Idunn, Birdiebook och nya). Använd ALLTID innan ett TestFlight- eller molnbygge startas, innan tester eller CI läggs upp eller ändras, när en ny app eller ett nytt repo påbörjas, och när en läxa ska skrivas ner som kan gälla fler än en app.
+description: Johannes arbetssätt för alla appar (Idunn, Birdiebook och nya). Använd ALLTID innan ett TestFlight- eller molnbygge startas, innan tester eller CI läggs upp eller ändras, när en ny app eller ett nytt repo påbörjas, och när en läxa ska skrivas ner som kan gälla fler än en app.
 ---
 
 # Arbetssättet — gäller varje app
@@ -10,10 +10,10 @@ Den här filen är en kopia. Sanningen bor i det privata repot `birdiebook/arbet
 ändra i `arbetssatt`, och synka. Appens egen CLAUDE.md gäller före den här filen där
 de skiljer sig.
 
-## Grundaren
+## Johannes
 
-- **Grundaren gör så lite som möjligt.** Gör stegen själv i stället för att beskriva
-  dem. Fråga bara när beslutet är grundarens: en leverans, något som kostar pengar,
+- **Johannes gör så lite som möjligt.** Gör stegen själv i stället för att beskriva
+  dem. Fråga bara när beslutet är Johannes: en leverans, något som kostar pengar,
   något som syns utåt eller inte går att backa.
 - **Kunskap bor i repot**, aldrig bara i en chatt eller i en dators minne. Beslut i
   appens beslutslogg, läxor där de hör hemma. En läxa som gäller fler än en app skrivs
@@ -21,9 +21,9 @@ de skiljer sig.
 
 ## Bygget och leveransen
 
-- **Inget bygge utan grundarens ja.** Varje TestFlight-bygge är en leverans.
+- **Inget bygge utan Johannes ja.** Varje TestFlight-bygge är en leverans.
 - **Högst ett bygge per dag.** En intensiv dag buntas till ett bygge. Det som landar
-  efter dagens bygge väntar till nästa. Fråga grundaren när det finns något att prova
+  efter dagens bygge väntar till nästa. Fråga Johannes när det finns något att prova
   på telefonen, inte efter varje etapp.
 - **Starta bygget med appens skript, aldrig med en tagg.** En tagg har startat inget
   bygge och ändå sett lyckad ut, tre gånger. Skriptet visar vad bygget bär och vägrar
@@ -42,7 +42,7 @@ de skiljer sig.
   månadens minuter per app. Appens byggskript frågar `codemagic_vakt.hinder()` före
   varje bygge: ett bygge går redan, dagens bygge är gjort, minuterna räcker inte. Prov
   och förhandsvisningar får aldrig äta reserven till TestFlight. Betalning är
-  grundarens beslut (0,095 USD per minut).
+  Johannes beslut (0,095 USD per minut).
 - **Ingenting dubbelt i betald CI.** Det som kan köras gratis körs där.
 
 ## Testerna
@@ -60,7 +60,7 @@ de skiljer sig.
 
 ## Data
 
-- **Riktig data lämnar bara grundarens enheter när han själv skickar den.** Testerna
+- **Riktig data lämnar aldrig Johannes enheter utan att Johannes själv skickar den.** Testerna
   bär påhittade fixturer. Felmeddelanden nämner fil och rad, aldrig värdet.
 - **Hemligheter står aldrig i en committad fil.** Nycklar ligger i `.env` på
   hemdatorn eller i molnmiljöns inställningar.
