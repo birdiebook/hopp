@@ -1,6 +1,6 @@
 # Hopp — plan
 
-`BAND` H1 nu · H2 nu · H3 · H4 · H5
+`BAND` H1 ✓ · H2 nu · H3 · H4 · H5
 
 Mål: mäta CMJ med bara telefonen, lika exakt som My Jump, och följa impulsen
 och dagsformen över vintern (vinterträningen 2026/27).
