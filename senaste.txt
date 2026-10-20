@@ -1,20 +1,20 @@
-fc6f55f034c99d371547535956b928b3a4934523 main 2026-10-20T18:30:35Z run 39475209000
+168c769910c9eb727fff371af02c2ac61ae979c3 main 2026-10-20T19:15:18Z run 39481751298
 == swift-release
-GRÖNT: 19 test, 0 fel, 1 s i testerna, bygget 6 s
+GRÖNT: 19 test, 0 fel, 0 s i testerna, bygget 10 s
 Långsammast (av 19):
-      0.1 s  HistoryTests.testSorternaHållsIsär
-      0.1 s  HistoryTests.testNormalDagsformInnanförGränsen
-      0.1 s  HistoryTests.testFilformatetÄrStabilt
-      0.1 s  JumpMathTests.testEffektenEnligtSayers
-      0.1 s  JumpMathTests.testAvstampsfartOchImpuls
       0.0 s  HistoryTests.testDagarnaFöljerSvenskTid
       0.0 s  HistoryTests.testSänktDagsformMotMedianenAvDeSenasteFem
       0.0 s  HistoryTests.testSparaOchLäsTillbaka
+      0.0 s  HistoryTests.testSorternaHållsIsär
+      0.0 s  HistoryTests.testNormalDagsformInnanförGränsen
+      0.0 s  HistoryTests.testFilformatetÄrStabilt
+      0.0 s  HistoryTests.testDagsformenKräverTreTidigareDagar
+      0.0 s  FrameClockTests.test168BilderVid240ÄrEttHoppPå60cm
       0.0 s  JumpMathTests.testTidenOchHöjdenÄrVarandrasInvers
       0.0 s  JumpMathTests.testResultatetSamlarAllt
       0.0 s  JumpMathTests.testOsäkerhetenFörEnBild
       0.0 s  JumpMathTests.testHöjdenUrTidenILuften
-      0.0 s  HistoryTests.testDagsformenKräverTreTidigareDagar
+      0.0 s  JumpMathTests.testEffektenEnligtSayers
+      0.0 s  JumpMathTests.testAvstampsfartOchImpuls
       0.0 s  FrameClockTests.testTomOchEnsamKlocka
-      0.0 s  FrameClockTests.testOmsparadSlowMotionFällsSomFörLång
 
