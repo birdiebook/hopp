@@ -1,0 +1,20 @@
+7e9cee20502e3e380351b66375dafeb8392a0af2 main 2026-10-20T20:53:00Z run 39495631760
+== swift-release
+GRÖNT: 24 test, 0 fel, 0 s i testerna, bygget 6 s
+Långsammast (av 24):
+      0.1 s  FrameClockTests.testFelMarkeringar
+      0.0 s  ProgressTests.testNormalnivånÄrDagsbästaUnderDeSenasteDagarna
+      0.0 s  HistoryTests.testDagarnaFöljerSvenskTid
+      0.0 s  ProgressTests.testTestdagenÄrKlarEfterTreOchRäknarInteFler
+      0.0 s  ProgressTests.testTestdagenRäknarDagensHoppAvRättSort
+      0.0 s  ProgressTests.testIngenNormalnivåFörränTreDagar
+      0.0 s  HistoryTests.testSänktDagsformMotMedianenAvDeSenasteFem
+      0.0 s  HistoryTests.testSparaOchLäsTillbaka
+      0.0 s  HistoryTests.testNormalDagsformInnanförGränsen
+      0.0 s  ProgressTests.testÄldreFilUtanLängdOchSpelhandGårAttLäsa
+      0.0 s  JumpMathTests.testTidenOchHöjdenÄrVarandrasInvers
+      0.0 s  JumpMathTests.testResultatetSamlarAllt
+      0.0 s  JumpMathTests.testOsäkerhetenFörEnBild
+      0.0 s  JumpMathTests.testHöjdenUrTidenILuften
+      0.0 s  JumpMathTests.testEffektenEnligtSayers
+
