@@ -1,0 +1,20 @@
+5c60e251cee58509682c7970b286304f805766b6 claude/arbetssatt-johannes 2026-10-20T20:30:09Z run 39492364146
+== swift-release
+GRÖNT: 19 test, 0 fel, 0 s i testerna, bygget 7 s
+Långsammast (av 19):
+      0.1 s  HistoryTests.testNormalDagsformInnanförGränsen
+      0.1 s  FrameClockTests.testOjämnTaktLäsesUrBildtidernaInteUrFrekvensen
+      0.1 s  FrameClockTests.testFelMarkeringar
+      0.0 s  HistoryTests.testDagarnaFöljerSvenskTid
+      0.0 s  HistoryTests.testSänktDagsformMotMedianenAvDeSenasteFem
+      0.0 s  HistoryTests.testSparaOchLäsTillbaka
+      0.0 s  HistoryTests.testSorternaHållsIsär
+      0.0 s  FrameClockTests.test168BilderVid240ÄrEttHoppPå60cm
+      0.0 s  JumpMathTests.testTidenOchHöjdenÄrVarandrasInvers
+      0.0 s  JumpMathTests.testResultatetSamlarAllt
+      0.0 s  JumpMathTests.testOsäkerhetenFörEnBild
+      0.0 s  JumpMathTests.testHöjdenUrTidenILuften
+      0.0 s  JumpMathTests.testEffektenEnligtSayers
+      0.0 s  JumpMathTests.testAvstampsfartOchImpuls
+      0.0 s  HistoryTests.testFilformatetÄrStabilt
+
