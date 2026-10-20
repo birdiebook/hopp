@@ -6,7 +6,7 @@ Varje beslut som formar bygget. Nytt beslut = ny rad i samma commit som koden.
 Status: **gäller** · **prövas** (gäller tills en mätning avgör) · **ersatt**.
 
 ## B1 — En egen app, inte en del av Birdiebook
-*2026-10-20 · gäller · grundarens beslut*
+*2026-10-20 · gäller · Johannes beslut*
 
 - **Valt:** appen Hopp med eget repo och eget App Store Connect-konto.
 - **Bortvalt:** ett gymverktyg i golfappen, som hade haft byggkedjan klar.
@@ -34,7 +34,7 @@ Status: **gäller** · **prövas** (gäller tills en mätning avgör) · **ersat
 
 - **Valt:** ingen server, inget moln, ingen inloggning. Historik och videor i
   appens mapp, videorna utanför iCloud-backupen.
-- **Kostnad:** byter grundaren telefon följer historiken med bara via backupen;
+- **Kostnad:** byter Johannes telefon följer historiken med bara via backupen;
   videorna gör det inte.
 
 ## B5 — Tiden i luften, inte låda eller vägg
@@ -54,7 +54,7 @@ Status: **gäller** · **prövas** (gäller tills en mätning avgör) · **ersat
   höjden, och impulsen tar hänsyn till vikten.
 
 ## B7 — Repot är publikt
-*2026-10-20 · gäller · grundarens beslut*
+*2026-10-20 · gäller · Johannes beslut*
 
 - **Valt:** `birdiebook/hopp` är publikt, så att GitHub Actions är gratis utan
   gräns. Kontots 2 000 minuter för privata repon tog slut 18/10.

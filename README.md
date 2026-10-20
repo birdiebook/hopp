@@ -3,7 +3,7 @@
 Mäter hopp (CMJ) ur slow motion med bara telefonen: höjd, impuls och effekt,
 och dagsformen över tid. Se [PLAN.md](PLAN.md) och [CLAUDE.md](CLAUDE.md).
 
-## Första gången (grundaren, cirka 20 min)
+## Första gången (Johannes, cirka 20 min)
 
 1. **App Store Connect → Appar → +:** ny app, bundle-id `se.birdiebook.hopp`
    (registreras annars av första bygget), namnet "Hopp" eller närmaste lediga.

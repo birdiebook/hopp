@@ -1,18 +1,18 @@
 # Hopp — arbetssätt
 
 Hopp är en privat iPhone-app som mäter hopp (CMJ) ur slow motion: tiden i luften
-ger höjd, avstampsfart, impuls och effekt. Den hör till grundarens vinterträning
+ger höjd, avstampsfart, impuls och effekt. Den hör till Johannes vinterträning
 för golf, och impulsen är måttet som följer klubbhastigheten (docs/METOD.md M3).
 
 ## Dataregeln — läs först
 
-**Videor och mätningar lämnar bara grundarens telefon när han själv skickar dem.**
+**Videor och mätningar lämnar bara telefonen när Johannes själv skickar dem.**
 
 - Appen har ingen server och inget moln. Historiken ligger som JSON i appens
   Application Support, och videorna bredvid (utanför iCloud-backupen).
 - Testerna bär **påhittade** hopp. Lägg aldrig in riktiga mätningar eller videor
   i repot: `.gitignore` stänger ute `*.mov`, `*.mp4`, `*.csv` och `data/`.
-- En video eller ett värde som grundaren själv delar i chatten får analyseras,
+- En video eller ett värde som Johannes själv delar i chatten får analyseras,
   men går aldrig vidare in i repot, testerna eller commit-meddelanden.
 
 ## Arbetssättet — delat med de andra apparna
@@ -32,7 +32,7 @@ från `birdiebook/arbetssatt`: ändra där och synka, aldrig i kopian.
   `project.yml` (XcodeGen) och är gitignorerat, liksom `App/Info.plist`.
 - **TestFlight** byggs av Codemagic (`codemagic.yaml`, `ios-testflight`) med samma
   App Store Connect-nyckel som Idunn och Birdiebook. Bundle-id `se.birdiebook.hopp`.
-  Bygget startas **bara** med `python tools/bygg.py --starta`, efter grundarens ja,
+  Bygget startas **bara** med `python tools/bygg.py --starta`, efter Johannes ja,
   högst ett per dag. Aldrig med en tagg.
 - App-koden kompileras först hos Codemagic, så ett fel där kostar ett bygge.
   Läs igenom App/-ändringar extra noga mot API:ernas signaturer före push.

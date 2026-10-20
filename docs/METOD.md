@@ -74,7 +74,7 @@ Varje formel och konstant i Hopp, med varifrån den kommer. Koden hänvisar hit
   ett känsligare mått på trötthet än det bästa hoppet. **forskning, ej läst i
   original.**
 - 5 %-gränsen, 5 dagar och 3 dagar är **antaganden**. De ska kalibreras mot
-  grundarens egen variation mellan dagar när det finns ett par veckors data.
+  Johannes egen variation mellan dagar när det finns ett par veckors data.
 
 ## M7 — Kameran
 

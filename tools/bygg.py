@@ -1,7 +1,7 @@
-"""TestFlight-bygget: vad nästa bygge bär, och starten när grundaren sagt ja.
+"""TestFlight-bygget: vad nästa bygge bär, och starten när Johannes sagt ja.
 
     python tools/bygg.py            # vad nästa bygge bär, och om det kan starta; startar inget
-    python tools/bygg.py --starta   # starta ios-testflight på main (bara efter grundarens ja)
+    python tools/bygg.py --starta   # starta ios-testflight på main (bara efter Johannes ja)
 
 Samma regler som Idunn (arbetssättet, Bygget och leveransen): högst ett bygge
 per dag (svensk tid), bara när Actions är grönt för main:s senaste commit
@@ -112,11 +112,11 @@ def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--starta", action="store_true", help="starta bygget (bara efter grundarens ja)")
+    ap.add_argument("--starta", action="store_true", help="starta bygget (bara efter Johannes ja)")
     ap.add_argument("--betalt", action="store_true",
-                    help="minuterna får ta slut: grundaren har slagit på betalning i Codemagic")
+                    help="minuterna får ta slut: Johannes har slagit på betalning i Codemagic")
     ap.add_argument("--igen-idag", action="store_true",
-                    help="ett andra bygge i dag (bara när grundaren uttryckligen ber om det)")
+                    help="ett andra bygge i dag (bara när Johannes uttryckligen ber om det)")
     a = ap.parse_args()
     tok = cm.token()
     nu = datetime.now(timezone.utc)
