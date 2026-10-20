@@ -54,6 +54,16 @@ final class Store {
         save()
     }
 
+    func setBodyHeight(_ cm: Double) {
+        history.bodyHeightCm = cm
+        save()
+    }
+
+    func setPlaysRightHanded(_ right: Bool) {
+        history.playsRightHanded = right
+        save()
+    }
+
     func add(_ attempt: JumpAttempt) {
         history.attempts.append(attempt)
         save()

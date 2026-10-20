@@ -19,6 +19,10 @@ stega bild för bild, markera första bilden i luften och första på marken, sp
 med sort (händer på höfterna eller armsving) och vikt. Historik per dag, diagram
 över höjd, impuls och effekt, och dagsformen.
 
+Utseendet och flödet följer BESLUT B13 (den klickbara skissen "Airtime – skiss"):
+Idag med dagsformen och testdagen, testet som flöde med filmremsa och
+resultatkort, Utveckling med normalbandet (METOD M14) och Jag.
+
 **Klart när:** H3:s bygge går igenom och Johannes har mätt ett hopp på telefonen.
 
 ## H3 — Första bygget

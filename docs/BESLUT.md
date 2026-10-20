@@ -104,3 +104,17 @@ Status: **gäller** · **prövas** (gäller tills en mätning avgör) · **ersat
 - **Valt:** tre sätt att få skalan, den senaste sparas. Ingen fast bolldiameter.
 - **Sedan:** appen följer bollen själv (PLAN.md H7), men skalan i meter kräver
   fortfarande en av de tre.
+
+## B13 — Formspråket: mörkt, volt och piktogram
+*2026-10-20 · gäller · Johannes beslut, efter den klickbara skissen*
+
+- **Valt:** mörk botten (#0B0D10, kort #15181D), en accentfärg **volt**
+  (#C8FF2E) med mörk text på, stora siffror i SF Pro smal (inga egna typsnitt),
+  och personen som **piktogram** (tjocka rundade lemmar, fristående huvud), aldrig
+  streckgubbe. Tre flikar: **Idag** (dagsformen, testdagen, starta), **Utveckling**
+  (ett mått i taget med normalbandet) och **Jag** (vikt, längd, spelhand). Testet
+  är ett flöde: uppställning som bild → kamera → granskning med filmremsa →
+  resultatkort med normalnivån.
+- **Bortvalt:** ljust tema, Birdiebooks gröna, streckgubben (kändes oproffsig).
+- **Regeln:** mindre text, bilden bär, som i Birdiebook (golf-sg
+  `docs/formsprak-glas.md` regel 8).

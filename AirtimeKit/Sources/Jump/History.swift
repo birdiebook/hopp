@@ -45,11 +45,18 @@ public struct History: Codable, Equatable, Sendable {
     public var version: Int
     /// Vikten som föreslås för nästa hopp, eller nil innan den angetts.
     public var bodyMassKg: Double?
+    /// Längden i cm, för kastets skala (PLAN.md H7). Saknas i äldre filer.
+    public var bodyHeightCm: Double?
+    /// Spelar höger (nil = inte angett). Avgör golfsidan i kastet (BESLUT B11).
+    public var playsRightHanded: Bool?
     public var attempts: [JumpAttempt]
 
-    public init(bodyMassKg: Double? = nil, attempts: [JumpAttempt] = []) {
+    public init(bodyMassKg: Double? = nil, bodyHeightCm: Double? = nil, playsRightHanded: Bool? = nil,
+                attempts: [JumpAttempt] = []) {
         version = Self.currentVersion
         self.bodyMassKg = bodyMassKg
+        self.bodyHeightCm = bodyHeightCm
+        self.playsRightHanded = playsRightHanded
         self.attempts = attempts
     }
 

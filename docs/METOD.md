@@ -81,3 +81,13 @@ Varje formel och konstant i Airtime, med varifrån den kommer. Koden hänvisar h
 - Bakre vidvinkelkameran i det format som har högst bildfrekvens (upp till 240),
   och vid lika den största bilden upp till 1080p. Bildstabiliseringen är av,
   eftersom den beskär och kan förskjuta bilderna. **antagande.**
+
+## M14 — Normalnivån
+
+- Normalnivån för en sort är **dagsbästa** (högsta hoppet per dag) under upp
+  till 5 tidigare testdagar, minst 3. Medianen är nivån, och lägsta till högsta
+  dagsbästa är bandet som ritas i resultatet och i Utveckling.
+- Ett hopp jämförs med medianen: höjd / median − 1.
+- Dagsformen (M6) räknas däremot på dagens **snitt**, eftersom snittet följer
+  tröttheten bättre. Bästa hoppet visar utvecklingen, snittet visar dagen.
+- 5 och 3 dagar är samma **antaganden** som i M6 och kalibreras med dem.

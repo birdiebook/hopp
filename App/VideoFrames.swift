@@ -9,6 +9,8 @@ final class VideoFrames {
     /// När videon spelades in, om filen säger det.
     let recordedAt: Date?
     private let generator: AVAssetImageGenerator
+    /// Små bilder till filmremsan, egen generator så att de inte köar bakom den stora bilden.
+    private let thumbnails: AVAssetImageGenerator
 
     private init(asset: AVURLAsset, times: [CMTime], recordedAt: Date?) {
         self.times = times
@@ -20,6 +22,11 @@ final class VideoFrames {
         generator.requestedTimeToleranceBefore = .zero
         generator.requestedTimeToleranceAfter = .zero
         generator.maximumSize = CGSize(width: 1280, height: 1280)
+        thumbnails = AVAssetImageGenerator(asset: asset)
+        thumbnails.appliesPreferredTrackTransform = true
+        thumbnails.requestedTimeToleranceBefore = .zero
+        thumbnails.requestedTimeToleranceAfter = .zero
+        thumbnails.maximumSize = CGSize(width: 160, height: 160)
     }
 
     enum LoadError: LocalizedError {
@@ -59,5 +66,9 @@ final class VideoFrames {
 
     func image(at index: Int) async throws -> CGImage {
         try await generator.image(at: times[index]).image
+    }
+
+    func thumbnail(at index: Int) async throws -> CGImage {
+        try await thumbnails.image(at: times[index]).image
     }
 }

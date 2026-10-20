@@ -6,8 +6,9 @@ struct AirtimeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
                 .environment(store)
+                .preferredColorScheme(.dark)
         }
     }
 }
