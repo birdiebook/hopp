@@ -83,3 +83,24 @@ Status: **gäller** · **prövas** (gäller tills en mätning avgör) · **ersat
   Codemagics M2.
 - **Omprövas:** när Codemagics minuter fylls på. Kvarstår vägen här tas
   `codemagic.yaml` och `tools/bygg.py` bort, så att det bara finns en väg.
+
+## B10 — Enbenshoppen har två landningar
+*2026-10-20 · gäller · Johannes beslut*
+
+- **Valt:** landning på samma ben eller på båda fötterna, sparade som olika
+  varianter som bara jämförs med sig själva.
+- **Varför:** samma ben stämmer bäst med tiden i luften (METOD M1), båda
+  fötterna är enklare att göra lika varje gång.
+
+## B11 — Kastet sparas som mot vänster eller mot höger
+*2026-10-20 · gäller · Johannes beslut*
+
+- **Valt:** sidan sparas som riktning, och inställningen spelar höger/vänster
+  avgör vilken som är golfsidan. Appen fungerar då för båda.
+
+## B12 — Kastets skala väljs: bollen, en känd längd eller kroppslängden
+*2026-10-20 · gäller · Johannes beslut*
+
+- **Valt:** tre sätt att få skalan, den senaste sparas. Ingen fast bolldiameter.
+- **Sedan:** appen följer bollen själv (PLAN.md H7), men skalan i meter kräver
+  fortfarande en av de tre.

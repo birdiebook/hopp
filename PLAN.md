@@ -51,8 +51,13 @@ på samma sätt ur tiden i luften (METOD M1, M5):
 | Sort | Utförande |
 | --- | --- |
 | **Squat jump (SJ)** | Händerna på höfterna. Gå ned till ~90° i knät, stå **stilla i 2–3 s**, hoppa utan att sjunka först. Sjunker man innan är hoppet ogiltigt (syns i videon). |
-| **Enbens-CMJ vänster** | Händerna på höfterna, nedgång och hopp på vänster ben, landa på samma ben med rakt knä. |
+| **Enbens-CMJ vänster** | Händerna på höfterna, nedgång och hopp på vänster ben. |
 | **Enbens-CMJ höger** | Samma på höger ben. |
+
+Enbenshoppen har **två landningar**, valda vid sparandet: på samma ben med
+rakt knä (stämmer bäst med måttet), eller på båda fötterna med raka ben
+(enklare). De sparas som olika varianter och jämförs bara med sig själva
+(BESLUT B10).
 
 **Testdagen** (cirka 12 min, samma ordning varje gång): 5 min uppvärmning, 2
 provhopp, sedan 3 CMJ · 3 SJ · 3 vänster · 3 höger med växlade ben, 1 min
@@ -89,8 +94,10 @@ Det golfspecifika testet för kraftöverföringen. TPI:s kulstötning
 | **Stående** | Golfställning vinkelrätt mot kastriktningen, bollen vid bröstet. Rotera och stöt ut som i svingen; stanna på främre benet, kliv inte förbi främre foten (TPI). |
 | **Knästående** | Båda knäna i en matta, höften rakt över knäna. Samma rotation och stöt. Benen kan inte hjälpa till. |
 
-Båda sidor: **golfsidan** (åt samma håll som svingen) är huvudmåttet, och
-motsatt sida visar balansen. 3 kast per sort, bästa räknas.
+Båda sidor, sparade som **mot vänster** och **mot höger**. Inställningen
+**spelar höger/vänster** avgör vilken som är golfsidan (åt samma håll som
+svingen), så att appen fungerar för båda (BESLUT B11). Golfsidan är
+huvudmåttet, och motsatt sida visar balansen. 3 kast per sort, bästa räknas.
 
 **Filmningen:** telefonen på ett stativ eller mot en vägg **vinkelrätt mot
 kastriktningen**, 4–5 m bort, i höjd med bröstet, 240 bilder/s. Hela kastet
@@ -103,8 +110,17 @@ behövs. I videon markerar man:
 2. bollens **mitt** i två bilder efter släppet, cirka 15–20 bilder isär
    (60–80 ms vid 240 bilder/s).
 
-Farten = sträckan i pixlar / diametern i pixlar × bollens diameter (mätt en
-gång med måttband, sparas) / tiden mellan bilderna. Den räknas vid mitten av
+Farten = sträckan i pixlar / skalan i pixlar × skalans verkliga längd /
+tiden mellan bilderna. **Skalan** väljs, och den senaste sparas (BESLUT B12):
+
+- **bollens diameter**, mätt en gång med måttband;
+- **en känd längd i videon**: två punkter och längden, till exempel lådan på
+  60 cm eller en tejpbit på golvet;
+- **kroppslängden**: huvud och fötter i en bild där man står rakt, med
+  längden ur inställningarna.
+
+Bollen och skalan ska stå ungefär lika långt från kameran, annars blir farten
+fel i proportion till avståndet. Den räknas vid mitten av
 intervallet. Kastet ska gå i bildens plan; ett snett kast ger för låg fart.
 Längden kan skrivas in för hand som ett extra mått, för jämförelse med TPI.
 
@@ -119,3 +135,8 @@ Längden kan skrivas in för hand som ett extra mått, för jämförelse med TPI
 **Klart när:** farten räknas mot facit i tester (påhittade punkter med känt
 svar), markeringen fungerar på telefonen, och ett kast mätt i appen stämmer
 med en hand-räkning ur samma video inom 5 %.
+
+**Sedan, som H5 för hoppen:** appen hittar bollen själv. Man pekar ut den i en
+bild, och appen följer den genom bilderna och mäter diametern i pixlar. Man
+bekräftar bara. Metoden tas fram på Johannes kastvideor innan den byggs in
+(samma princip som BESLUT B3).
