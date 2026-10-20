@@ -12,7 +12,7 @@ final class Store {
 
     static let folder: URL = {
         let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-        return base.appending(path: "Hopp", directoryHint: .isDirectory)
+        return base.appending(path: "Airtime", directoryHint: .isDirectory)
     }()
     static var videos: URL { folder.appending(path: "Videor", directoryHint: .isDirectory) }
     private static var file: URL { folder.appending(path: "historik.json") }

@@ -46,7 +46,7 @@ class Sparrar(unittest.TestCase):
 
     def test_bara_dokument_kraver_ingen_ny_korning(self) -> None:
         self.assertTrue(bygg.utan_ci(["CLAUDE.md", "PLAN.md", "codemagic.yaml"]))
-        self.assertFalse(bygg.utan_ci(["CLAUDE.md", "HoppKit/Sources/Jump/JumpMath.swift"]))
+        self.assertFalse(bygg.utan_ci(["CLAUDE.md", "AirtimeKit/Sources/Jump/JumpMath.swift"]))
 
 
 if __name__ == "__main__":

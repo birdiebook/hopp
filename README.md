@@ -1,12 +1,12 @@
-# Hopp
+# Airtime
 
 Mäter hopp (CMJ) ur slow motion med bara telefonen: höjd, impuls och effekt,
 och dagsformen över tid. Se [PLAN.md](PLAN.md) och [CLAUDE.md](CLAUDE.md).
 
 ## Första gången (Johannes, cirka 20 min)
 
-1. **App Store Connect → Appar → +:** ny app, bundle-id `se.birdiebook.hopp`
-   (registreras annars av första bygget), namnet "Hopp" eller närmaste lediga.
+1. **App Store Connect → Appar → +:** ny app, bundle-id `se.birdiebook.airtime`
+   (registreras annars av första bygget), namnet "Airtime – Jump Test" eller liknande (namnet i App Store måste vara unikt; hemskärmen visar "Airtime").
    Lägg till den interna testgruppen med automatisk distribution, som för Idunn.
 2. **Codemagic → Add application:** välj repot `birdiebook/hopp`. Läs repot med
    en deploy key (SSH, bara läsrätt), som för Idunn: en app som läggs till med

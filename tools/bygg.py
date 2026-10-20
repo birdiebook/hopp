@@ -29,7 +29,7 @@ API = "https://api.codemagic.io/builds"
 APP_ID = ""
 WORKFLOW = "ios-testflight"
 # Det som startar Actions (`paths` i .github/workflows/test.yml). En commit som bara rör annat får inget resultat.
-CI_SOKVAGAR = ("HoppKit/", "App/", "tools/", "docs/", "project.yml", ".github/workflows/test.yml")
+CI_SOKVAGAR = ("AirtimeKit/", "App/", "tools/", "docs/", "project.yml", ".github/workflows/test.yml")
 
 
 def git(*a: str) -> subprocess.CompletedProcess:
@@ -96,7 +96,7 @@ def starta(tok: str) -> str:
         {"appId": APP_ID, "workflowId": WORKFLOW, "branch": "main"}).encode())
     req.add_header("x-auth-token", tok)
     req.add_header("Content-Type", "application/json")
-    req.add_header("User-Agent", "hopp-bygg/1.0")
+    req.add_header("User-Agent", "airtime-bygg/1.0")
     try:
         with urllib.request.urlopen(req, timeout=90) as r:
             svar = json.load(r)

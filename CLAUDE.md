@@ -1,6 +1,6 @@
-# Hopp — arbetssätt
+# Airtime — arbetssätt
 
-Hopp är en privat iPhone-app som mäter hopp (CMJ) ur slow motion: tiden i luften
+Airtime är en privat iPhone-app som mäter hopp (CMJ) ur slow motion: tiden i luften
 ger höjd, avstampsfart, impuls och effekt. Den hör till Johannes vinterträning
 för golf, och impulsen är måttet som följer klubbhastigheten (docs/METOD.md M3).
 
@@ -23,7 +23,7 @@ från `birdiebook/arbetssatt`: ändra där och synka, aldrig i kopian.
 
 ## Bygget — ingen Mac
 
-- **Logiken bor i `HoppKit/`** (Swift-paket, bara Foundation) och testas på Linux
+- **Logiken bor i `AirtimeKit/`** (Swift-paket, bara Foundation) och testas på Linux
   i GitHub Actions (`swift:6.1`, release med `-enable-testing`). Det är den enda
   kompilatorn före Codemagic: **pusha och läs resultatet** innan du tror att
   Swift-kod fungerar: `git fetch origin ci-resultat && git show
@@ -31,7 +31,7 @@ från `birdiebook/arbetssatt`: ändra där och synka, aldrig i kopian.
 - **Appen i `App/` är ett tunt SwiftUI-skal.** Xcode-projektet genereras ur
   `project.yml` (XcodeGen) och är gitignorerat, liksom `App/Info.plist`.
 - **TestFlight** byggs av Codemagic (`codemagic.yaml`, `ios-testflight`) med samma
-  App Store Connect-nyckel som Idunn och Birdiebook. Bundle-id `se.birdiebook.hopp`.
+  App Store Connect-nyckel som Idunn och Birdiebook. Bundle-id `se.birdiebook.airtime`.
   Bygget startas **bara** med `python tools/bygg.py --starta`, efter Johannes ja,
   högst ett per dag. Aldrig med en tagg.
 - App-koden kompileras först hos Codemagic, så ett fel där kostar ett bygge.

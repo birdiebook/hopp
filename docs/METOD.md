@@ -1,6 +1,6 @@
 # Metod och källor
 
-Varje formel och konstant i Hopp, med varifrån den kommer. Koden hänvisar hit
+Varje formel och konstant i Airtime, med varifrån den kommer. Koden hänvisar hit
 (`// METOD M3`), och en konstant utan rad här är en bugg.
 
 **Källans status:** **mätt** (i det här projektet) · **standard** · **fysik** ·

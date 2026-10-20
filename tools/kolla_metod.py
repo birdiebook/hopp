@@ -24,7 +24,7 @@ def main() -> int:
     metod = rubriker("docs/METOD.md", "M")
     beslut = rubriker("docs/BESLUT.md", "B")
     fel = []
-    for fil in sorted([*ROT.glob("HoppKit/**/*.swift"), *ROT.glob("App/**/*.swift"), *ROT.glob("tools/*.py")]):
+    for fil in sorted([*ROT.glob("AirtimeKit/**/*.swift"), *ROT.glob("App/**/*.swift"), *ROT.glob("tools/*.py")]):
         text = fil.read_text(encoding="utf-8")
         for n, rad in enumerate(text.splitlines(), 1):
             for ref in re.findall(r"METOD (M\d+)", rad):

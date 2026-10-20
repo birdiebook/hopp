@@ -6,7 +6,7 @@
 
 workflows:
   ios-testflight:
-    name: Hopp iOS -> TestFlight
+    name: Airtime iOS -> TestFlight
     instance_type: mac_mini_m2
     max_build_duration: 30
     triggering:
@@ -24,7 +24,7 @@ workflows:
         - signing
 
     scripts:
-      # HoppKits tester körs gratis i Actions, inte här. tools/bygg.py startar
+      # AirtimeKits tester körs gratis i Actions, inte här. tools/bygg.py startar
       # bygget bara när Actions är grönt för samma commit.
       - name: Generera Xcode-projektet
         script: |
@@ -45,7 +45,7 @@ workflows:
           echo "$CERTIFICATE_PRIVATE_KEY" | base64 --decode > /tmp/cert_key.pem
           grep -q "BEGIN.*PRIVATE KEY" /tmp/cert_key.pem
           # --create registrerar App ID:t och skapar profilen första gången.
-          app-store-connect fetch-signing-files "se.birdiebook.hopp" \
+          app-store-connect fetch-signing-files "se.birdiebook.airtime" \
             --type IOS_APP_STORE \
             --certificate-key=@file:/tmp/cert_key.pem \
             --create
@@ -55,8 +55,8 @@ workflows:
       - name: Arkivera
         script: |
           xcode-project build-ipa \
-            --project "Hopp.xcodeproj" \
-            --scheme "Hopp"
+            --project "Airtime.xcodeproj" \
+            --scheme "Airtime"
 
     artifacts:
       - build/ios/ipa/*.ipa

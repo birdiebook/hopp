@@ -1,11 +1,11 @@
 // swift-tools-version:5.9
 //
-// HoppKit — appens logik, fri från kamera och UI så att den går att testa på
+// AirtimeKit — appens logik, fri från kamera och UI så att den går att testa på
 // Linux (GitHub Actions) utan Mac och utan telefon. Appen i App/ är ett tunt skal.
 import PackageDescription
 
 let package = Package(
-    name: "HoppKit",
+    name: "AirtimeKit",
     platforms: [.iOS(.v17), .macOS(.v14)],
     products: [
         .library(name: "Jump", targets: ["Jump"]),

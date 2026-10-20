@@ -8,7 +8,7 @@ import UIKit
 final class CameraRecorder: NSObject, AVCaptureFileOutputRecordingDelegate {
     let session = AVCaptureSession()
     private let output = AVCaptureMovieFileOutput()
-    private let queue = DispatchQueue(label: "hopp.kamera")
+    private let queue = DispatchQueue(label: "airtime.kamera")
 
     var isRecording = false
     var frameRate = 0
@@ -21,7 +21,7 @@ final class CameraRecorder: NSObject, AVCaptureFileOutputRecordingDelegate {
     @MainActor
     func start() async {
         guard await AVCaptureDevice.requestAccess(for: .video) else {
-            problem = "Hopp får inte använda kameran. Slå på den under Inställningar → Hopp."
+            problem = "Airtime får inte använda kameran. Slå på den under Inställningar → Airtime."
             return
         }
         queue.async { [self] in

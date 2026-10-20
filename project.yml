@@ -1,25 +1,25 @@
 # Xcode-projektet genereras ur den här filen (XcodeGen) och är gitignorerat.
 # Ingen Mac behövs: Codemagic kör `xcodegen generate` före bygget.
-name: Hopp
+name: Airtime
 options:
   bundleIdPrefix: se.birdiebook
   deploymentTarget:
     iOS: "17.0"
 packages:
-  HoppKit:
-    path: HoppKit
+  AirtimeKit:
+    path: AirtimeKit
 targets:
-  Hopp:
+  Airtime:
     type: application
     platform: iOS
     sources:
       - App
     dependencies:
-      - package: HoppKit
+      - package: AirtimeKit
         product: Jump
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: se.birdiebook.hopp
+        PRODUCT_BUNDLE_IDENTIFIER: se.birdiebook.airtime
         MARKETING_VERSION: "0.1.0"
         # Skrivs över av Codemagics byggräknare (agvtool) vid varje bygge.
         CURRENT_PROJECT_VERSION: "1"
@@ -30,7 +30,7 @@ targets:
     info:
       path: App/Info.plist
       properties:
-        CFBundleDisplayName: Hopp
+        CFBundleDisplayName: Airtime
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         UILaunchScreen: {}
@@ -38,5 +38,5 @@ targets:
           - UIInterfaceOrientationPortrait
         # Utan den här fastnar varje bygge på exportfrågan i App Store Connect.
         ITSAppUsesNonExemptEncryption: false
-        NSCameraUsageDescription: Hopp filmar hoppet i slow motion för att mäta tiden i luften. Videon stannar på telefonen.
+        NSCameraUsageDescription: Airtime filmar hoppet i slow motion för att mäta tiden i luften. Videon stannar på telefonen.
     scheme: {}

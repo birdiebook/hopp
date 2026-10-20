@@ -1,11 +1,11 @@
-# Hopp — plan
+# Airtime — plan
 
 `BAND` H1 ✓ · H2 nu · H3 · H4 · H5
 
 Mål: mäta CMJ med bara telefonen, lika exakt som My Jump, och följa impulsen
 och dagsformen över vintern (vinterträningen 2026/27).
 
-## H1 — Logiken (HoppKit)
+## H1 — Logiken (AirtimeKit)
 
 Tiden i luften ur videons bildtider, höjd, avstampsfart, impuls, effekt,
 osäkerheten för en bild, historiken som fil, dagarna och dagsformen.

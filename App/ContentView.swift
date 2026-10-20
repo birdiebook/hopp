@@ -53,7 +53,7 @@ struct ContentView: View {
                     ContentUnavailableView("Inga hopp än", systemImage: "figure.jumprope")
                 }
             }
-            .navigationTitle("Hopp")
+            .navigationTitle("Airtime")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { settings = true } label: { Image(systemName: "gearshape") }

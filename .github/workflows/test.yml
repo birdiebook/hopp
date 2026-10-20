@@ -1,10 +1,10 @@
 # Kör paketens tester på Linux. Ingen Mac och ingen telefon behövs — det är
-# därför logiken bor i HoppKit och appen är ett tunt skal.
+# därför logiken bor i AirtimeKit och appen är ett tunt skal.
 name: tester
 
 on:
   push:
-    paths: ["HoppKit/**", "App/**", "tools/**", "docs/**", "project.yml", ".github/workflows/test.yml"]
+    paths: ["AirtimeKit/**", "App/**", "tools/**", "docs/**", "project.yml", ".github/workflows/test.yml"]
   pull_request:
   workflow_dispatch:
 
@@ -23,7 +23,7 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          swift test --package-path HoppKit -c ${{ matrix.conf }} -Xswiftc -enable-testing 2>&1 | tee swift-${{ matrix.conf }}.log
+          swift test --package-path AirtimeKit -c ${{ matrix.conf }} -Xswiftc -enable-testing 2>&1 | tee swift-${{ matrix.conf }}.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -8,14 +8,14 @@ Status: **gäller** · **prövas** (gäller tills en mätning avgör) · **ersat
 ## B1 — En egen app, inte en del av Birdiebook
 *2026-10-20 · gäller · Johannes beslut*
 
-- **Valt:** appen Hopp med eget repo och eget App Store Connect-konto.
+- **Valt:** appen Airtime (BESLUT B8) med eget repo och eget App Store Connect-konto.
 - **Bortvalt:** ett gymverktyg i golfappen, som hade haft byggkedjan klar.
 - **Kostnad:** en app till att sätta upp i Codemagic och App Store Connect.
 
 ## B2 — Ingen Mac: logiken på Linux, bygget hos Codemagic
 *2026-10-20 · gäller · samma väg som Idunn*
 
-- **Valt:** all räkning i `HoppKit` (bara Foundation), testad gratis i Actions.
+- **Valt:** all räkning i `AirtimeKit` (bara Foundation), testad gratis i Actions.
   Appen är ett tunt skal som bara Codemagic kompilerar.
 - **Kostnad:** ett fel i App/ syns först i ett bygge. Skalet hålls därför litet.
 
@@ -60,3 +60,12 @@ Status: **gäller** · **prövas** (gäller tills en mätning avgör) · **ersat
   gräns. Kontots 2 000 minuter för privata repon tog slut 18/10.
 - **Kostnad:** vem som helst kan läsa koden. Repot får därför aldrig bära en
   e-postadress, en nyckel eller en mätning (CLAUDE.md, Dataregeln).
+
+## B8 — Namnet är Airtime
+*2026-10-20 · gäller · Johannes beslut*
+
+- **Valt:** Airtime, det appen mäter: tiden i luften. Hemskärmen visar "Airtime";
+  i App Store Connect, där namnet måste vara unikt, ett längre namn som
+  "Airtime – Jump Test". Bundle-id `se.birdiebook.airtime`, paketet `AirtimeKit`.
+- **Behålls:** repot heter `hopp` (syns ingenstans), liksom grenen `ci-resultat`.
+- **Bortvalt:** Hopp (svenskt), Liftoff, Vert, Hang Time.
