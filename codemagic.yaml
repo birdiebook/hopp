@@ -1,0 +1,74 @@
+# Molnbygge -> TestFlight. Samma väg som Idunn och Birdiebook: ingen Mac,
+# bygget körs på Codemagics Apple silicon och startas med `python tools/bygg.py --starta`.
+#
+# Startas INTE av push eller tagg. I golf-sg lyssnade webhooken inte på
+# taggar, och en tagg såg lyckad ut utan att något byggdes.
+
+workflows:
+  ios-testflight:
+    name: Hopp iOS -> TestFlight
+    instance_type: mac_mini_m2
+    max_build_duration: 30
+    triggering:
+      events: []
+
+    integrations:
+      # Samma App Store Connect-nyckel som Birdiebook och Idunn.
+      app_store_connect: birdiebook-asc
+
+    environment:
+      xcode: latest
+      groups:
+        # CERTIFICATE_PRIVATE_KEY, base64. Ligger under APPENS Environment
+        # variables i Codemagic, inte på kontonivå.
+        - signing
+
+    scripts:
+      # HoppKits tester körs gratis i Actions, inte här. tools/bygg.py startar
+      # bygget bara när Actions är grönt för samma commit.
+      - name: Generera Xcode-projektet
+        script: |
+          brew install xcodegen
+          xcodegen generate
+
+      - name: Sätt buildnummer
+        script: agvtool new-version -all "$BUILD_NUMBER"
+
+      - name: Hämta signering
+        script: |
+          set -euo pipefail
+          keychain initialize
+          if [ -z "${CERTIFICATE_PRIVATE_KEY:-}" ]; then
+            echo "FEL: CERTIFICATE_PRIVATE_KEY saknas i gruppen 'signing' under appens Environment variables." >&2
+            exit 1
+          fi
+          echo "$CERTIFICATE_PRIVATE_KEY" | base64 --decode > /tmp/cert_key.pem
+          grep -q "BEGIN.*PRIVATE KEY" /tmp/cert_key.pem
+          # --create registrerar App ID:t och skapar profilen första gången.
+          app-store-connect fetch-signing-files "se.birdiebook.hopp" \
+            --type IOS_APP_STORE \
+            --certificate-key=@file:/tmp/cert_key.pem \
+            --create
+          keychain add-certificates
+          xcode-project use-profiles
+
+      - name: Arkivera
+        script: |
+          xcode-project build-ipa \
+            --project "Hopp.xcodeproj" \
+            --scheme "Hopp"
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+
+    publishing:
+      app_store_connect:
+        auth: integration
+        # Intern testning granskas aldrig. true skickar på extern granskning
+        # och fällde efterbehandlingen i Idunn (2026-10-12).
+        submit_to_testflight: false
+        # Ingen beta_groups: den interna gruppen får bygget via automatisk
+        # distribution (Idunns läxa 2026-10-12).
+      # Ingen e-postadress här: repot är publikt (BESLUT B7). TestFlight
+      # meddelar själv när ett bygge är klart, och Codemagic visar felen.

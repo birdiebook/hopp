@@ -1,0 +1,10 @@
+{
+  "kalla": "birdiebook/arbetssatt",
+  "version": "9b4cb3ee14af7926af68e4a4a914fa3193fa631c",
+  "filer": {
+    ".claude/skills/arbetssatt/SKILL.md": "d4bd077571500d2a20b7a28a166a2b78d8baac07d3de6565b48b4a7c9b47d323",
+    "tools/arbetssatt/ci_sammanfattning.py": "af72fbd5abb2c75d7215e159688b3555cbd16ecd9de1a06f65e6105173eab9b3",
+    "tools/arbetssatt/codemagic_vakt.py": "ee93c1321a313735ebb7ed3c4639b977f4a67dda970fd5835a164278eff8b25f",
+    ".claude/arbetssatt_koll.py": "55064c2b28ae110391847a6f175ed7fbaa944190cb189c842650055ab4802bbb"
+  }
+}
